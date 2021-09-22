@@ -5,7 +5,7 @@ import {useTheme, useTranslation} from '../hooks/';
 import {Block, Button, Image, Text} from '../components/';
 
 const Pro = () => {
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const {assets, colors, gradients, sizes} = useTheme();
 
   useEffect(() => {
@@ -26,18 +26,22 @@ const Pro = () => {
       <Block safe justify="center">
         <Block card flex={0} padding={sizes.sm} marginBottom={sizes.sm}>
           <Text h4 center semibold marginBottom={sizes.sm}>
-            {t('pro.title')}
+            {translatedLocale('pro.title')}
           </Text>
 
-          <Text marginBottom={sizes.padding}>{t('pro.appTemplate')}</Text>
+          <Text marginBottom={sizes.padding}>
+            {translatedLocale('pro.appTemplate')}
+          </Text>
 
-          <Text semibold>{t('pro.components', {count: 11})}</Text>
-          <Text semibold>{t('pro.screens', {count: 18})}</Text>
-          <Text semibold>{t('pro.support')}</Text>
+          <Text semibold>
+            {translatedLocale('pro.components', {count: 11})}
+          </Text>
+          <Text semibold>{translatedLocale('pro.screens', {count: 18})}</Text>
+          <Text semibold>{translatedLocale('pro.support')}</Text>
 
           <Text marginVertical={sizes.padding}>{t('pro.saveTime')}</Text>
 
-          <Text>{t('pro.takeAdvantage')}</Text>
+          <Text>{translatedLocale('pro.takeAdvantage')}</Text>
 
           <Block
             row
@@ -64,7 +68,7 @@ const Pro = () => {
               )
             }>
             <Text white bold transform="uppercase">
-              {t('pro.buyNow')}
+              {translatedLocale('pro.buyNow')}
             </Text>
           </Button>
         </Block>

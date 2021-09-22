@@ -18,7 +18,7 @@ import Button from '../components/Button';
 import Block from '../components/Block';
 
 export default () => {
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const {user} = useData();
   const navigation = useNavigation();
   const {icons, colors, gradients, sizes} = useTheme();
@@ -91,7 +91,7 @@ export default () => {
       ...menu,
       headerTitle: () => (
         <Text p white>
-          {t('navigation.components')}
+          {translatedLocale('navigation.components')}
         </Text>
       ),
       headerRight: () => null,
@@ -107,7 +107,7 @@ export default () => {
       headerTransparent: true,
       headerTitle: () => (
         <Text p white semibold>
-          {t('pro.title')}
+          {translatedLocale('pro.title')}
         </Text>
       ),
       headerRight: () => null,

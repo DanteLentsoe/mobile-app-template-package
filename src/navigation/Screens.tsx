@@ -7,7 +7,7 @@ import {useScreenOptions, useTranslation} from '../hooks';
 const Stack = createStackNavigator();
 
 export default () => {
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const screenOptions = useScreenOptions();
 
   return (
@@ -15,7 +15,7 @@ export default () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{title: t('navigation.home')}}
+        options={{title: translatedLocale('navigation.home')}}
       />
 
       <Stack.Screen
@@ -27,7 +27,7 @@ export default () => {
       <Stack.Screen
         name="Articles"
         component={Articles}
-        options={{title: t('navigation.articles')}}
+        options={{title: translatedLocale('navigation.articles')}}
       />
 
       <Stack.Screen name="Pro" component={Pro} options={screenOptions.pro} />

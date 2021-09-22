@@ -66,7 +66,7 @@ const DrawerContent = (
   props: DrawerContentComponentProps<DrawerContentOptions>,
 ) => {
   const {navigation} = props;
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const {isDark, handleIsDark} = useData();
   const [active, setActive] = useState('Home');
   const {assets, colors, gradients, sizes} = useTheme();
@@ -84,14 +84,34 @@ const DrawerContent = (
 
   // screen list for Drawer menu
   const screens = [
-    {name: t('screens.home'), to: 'Home', icon: assets.home},
-    {name: t('screens.components'), to: 'Components', icon: assets.components},
-    {name: t('screens.articles'), to: 'Articles', icon: assets.document},
-    {name: t('screens.rental'), to: 'Pro', icon: assets.rental},
-    {name: t('screens.profile'), to: 'Profile', icon: assets.profile},
-    {name: t('screens.settings'), to: 'Pro', icon: assets.settings},
-    {name: t('screens.register'), to: 'Register', icon: assets.register},
-    {name: t('screens.extra'), to: 'Pro', icon: assets.extras},
+    {name: translatedLocale('screens.home'), to: 'Home', icon: assets.home},
+    {
+      name: translatedLocale('screens.components'),
+      to: 'Components',
+      icon: assets.components,
+    },
+    {
+      name: translatedLocale('screens.articles'),
+      to: 'Articles',
+      icon: assets.document,
+    },
+    {name: translatedLocale('screens.rental'), to: 'Pro', icon: assets.rental},
+    {
+      name: translatedLocale('screens.profile'),
+      to: 'Profile',
+      icon: assets.profile,
+    },
+    {
+      name: translatedLocale('screens.settings'),
+      to: 'Pro',
+      icon: assets.settings,
+    },
+    {
+      name: translatedLocale('screens.register'),
+      to: 'Register',
+      icon: assets.register,
+    },
+    {name: translatedLocale('screens.extra'), to: 'Pro', icon: assets.extras},
   ];
 
   return (
@@ -113,10 +133,10 @@ const DrawerContent = (
           />
           <Block>
             <Text size={12} semibold>
-              {t('app.name')}
+              {translatedLocale('app.name')}
             </Text>
             <Text size={12} semibold>
-              {t('app.native')}
+              {translatedLocale('app.native')}
             </Text>
           </Block>
         </Block>
@@ -163,7 +183,7 @@ const DrawerContent = (
         />
 
         <Text semibold transform="uppercase" opacity={0.5}>
-          {t('menu.documentation')}
+          {translatedLocale('menu.documentation')}
         </Text>
 
         <Button
@@ -192,17 +212,20 @@ const DrawerContent = (
             />
           </Block>
           <Text p color={labelColor}>
-            {t('menu.started')}
+            {translatedLocale('menu.started')}
           </Text>
         </Button>
 
         <Block row justify="space-between" marginTop={sizes.sm}>
-          <Text color={labelColor}>{t('darkMode')}</Text>
+          <Text color={labelColor}>{translatedLocale('darkMode')}</Text>
           <Switch
             checked={isDark}
             onPress={(checked) => {
               handleIsDark(checked);
-              Alert.alert(t('pro.title'), t('pro.alert'));
+              Alert.alert(
+                translatedLocale('pro.title'),
+                translatedLocale('pro.alert'),
+              );
             }}
           />
         </Block>

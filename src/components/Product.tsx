@@ -8,7 +8,7 @@ import {IProduct} from '../constants/types';
 import {useTheme, useTranslation} from '../hooks/';
 
 const Product = ({image, title, type, linkLabel}: IProduct) => {
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const {assets, colors, sizes} = useTheme();
 
   const isHorizontal = type !== 'vertical';
@@ -45,7 +45,7 @@ const Product = ({image, title, type, linkLabel}: IProduct) => {
               semibold
               size={sizes.linkSize}
               marginRight={sizes.s}>
-              {linkLabel || t('common.readArticle')}
+              {linkLabel || translatedLocale('common.readArticle')}
             </Text>
             <Image source={assets.arrow} color={colors.link} />
           </Block>
