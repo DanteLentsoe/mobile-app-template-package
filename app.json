@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "rn-soft-ui-kit-free",
-    "slug": "rn-soft-ui-kit-free",
-    "description": "React Native - Soft UI Kit - Free",
+    "name": "danware-software-soft-ui-kit-free",
+    "slug": "danware-software-soft-ui-kit-free",
+    "description": "React Native - DanWare Software UI Kit - Free",
     "primaryColor": "#CB0C9F",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -15,9 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
