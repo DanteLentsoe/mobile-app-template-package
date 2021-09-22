@@ -51,7 +51,7 @@
   "app": {
     "name": "DanWare Software UI",
     "fullname": "DanWare Software UI Kit",
-    "native": "React Native",
+    "author": "Made By Dante Lentsoe",
     "link": "dantelentsoe.com"
   },
   "darkMode": "Dark Mode",
@@ -59,10 +59,10 @@
     "home": "Home",
     "components": "Components",
     "articles": "Articles",
-    "rental": "Rental",
+    "rental": "Terms and Conditions Page",
     "profile": "Profile",
     "settings": "Settings",
-    "register": "Create account",
+    "register": "Sign Up Page",
     "extra": "Extra - Automotive"
   },
   "navigation": {
@@ -104,13 +104,11 @@
     "following": "Following",
     "aboutMe": "About me"
   },
-  "pro": {
-    "title": "DanWare Software UI PRO",
+  "termsPage": {
+    "title": "DanWare Software UI Terms and Conditions Page",
+    "heading": "Terms and Conditions ",
     "alert": "This feature is available in PRO version",
-    "components": "• {{count} Components (Buttons, Inputs, Cards, etc)",
-    "screens": "• {{count} Screens (Shopping, Notifications, Chat, etc)",
-    "support": "• Premium Support included",
-    "takeAdvantage": "Take advantage of all the features and screens coded on React Native for both",
+    "usage": "Take advantage of all already build features and screens coded on React Native for both",
     "appTemplate": "DanWare Software UI PRO React Native is an innovative app template that will help you built stunning mobile applications in no time. It features a huge number of components and screens built to fit together and look amazing:",
     "saveTime": "This modern app template will save you a lot of time going from prototyping to full-functional code, because all elements are implemented. We wanted the design process to be seamless, so switching from image to the real page is very easy to do!",
     "buyNow": "Buy now"
