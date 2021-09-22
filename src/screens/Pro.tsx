@@ -1,12 +1,13 @@
 import React, {useCallback, useEffect} from 'react';
 import {Linking, StatusBar} from 'react-native';
-
+import {useNavigation} from '@react-navigation/core';
 import {useTheme, useTranslation} from '../hooks/';
 import {Block, Button, Image, Text} from '../components/';
 
 const Pro = () => {
   const {translatedLocale} = useTranslation();
-  const {assets, colors, gradients, sizes} = useTheme();
+  const {assets, colors, sizes} = useTheme();
+  const navigation = useNavigation();
 
   useEffect(() => {
     StatusBar.setBarStyle('light-content');
@@ -15,35 +16,24 @@ const Pro = () => {
     };
   }, []);
 
-  const handleWebLink = useCallback((url) => Linking.openURL(url), []);
+  // const handleWebLink = useCallback((url) => Linking.openURL(url), []);
 
   return (
-    <Image
-      background
-      source={assets.background}
-      padding={sizes.padding}
-      style={{flex: 1}}>
+    <Block padding={sizes.padding} color={colors.primarySoft} style={{flex: 1}}>
       <Block safe justify="center">
         <Block card flex={0} padding={sizes.sm} marginBottom={sizes.sm}>
           <Text h4 center semibold marginBottom={sizes.sm}>
-            {translatedLocale('pro.title')}
+            {translatedLocale('termsPage.title')}
           </Text>
 
           <Text marginBottom={sizes.padding}>
-            {translatedLocale('pro.appTemplate')}
+            {translatedLocale('termsPage.appTemplate')}
           </Text>
-
-          <Text semibold>
-            {translatedLocale('pro.components', {count: 11})}
-          </Text>
-          <Text semibold>{translatedLocale('pro.screens', {count: 18})}</Text>
-          <Text semibold>{translatedLocale('pro.support')}</Text>
-
           <Text marginVertical={sizes.padding}>
-            {translatedLocale('pro.saveTime')}
+            {translatedLocale('termsPage.saveTime')}
           </Text>
 
-          <Text>{translatedLocale('pro.takeAdvantage')}</Text>
+          <Text>{translatedLocale('termsPage.usage')}</Text>
 
           <Block
             row
@@ -52,30 +42,26 @@ const Pro = () => {
             marginVertical={sizes.padding}>
             <Image
               source={assets.ios}
-              color={colors.icon}
+              color={colors.tertiarySoft}
               style={{height: 38, width: 82}}
             />
             <Image
               source={assets.android}
-              color={colors.icon}
+              color={colors.tertiarySoft}
               style={{height: 38, width: 140}}
             />
           </Block>
 
           <Button
-            gradient={gradients.primary}
-            onPress={() =>
-              handleWebLink(
-                'https://www.creative-tim.com/product/soft-ui-pro-react-native',
-              )
-            }>
+            color={colors.tertiarySoft}
+            onPress={() => navigation.goBack()}>
             <Text white bold transform="uppercase">
-              {translatedLocale('pro.buyNow')}
+              Back Home
             </Text>
           </Button>
         </Block>
       </Block>
-    </Image>
+    </Block>
   );
 };
 
