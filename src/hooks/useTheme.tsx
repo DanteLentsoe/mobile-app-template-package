@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useContext, createContext} from 'react';
 
 import {light} from '../constants/';
 import {ITheme, IThemeProvider} from '../constants/types';
 
-export const ThemeContext = React.createContext({
+export const ThemeContext = createContext({
   theme: light,
   setTheme: () => {},
 });
@@ -21,6 +21,6 @@ export const ThemeProvider = ({
 };
 
 export default function useTheme(): ITheme {
-  const {theme} = React.useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
   return theme;
 }
