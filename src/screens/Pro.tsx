@@ -39,7 +39,9 @@ const Pro = () => {
           <Text semibold>{translatedLocale('pro.screens', {count: 18})}</Text>
           <Text semibold>{translatedLocale('pro.support')}</Text>
 
-          <Text marginVertical={sizes.padding}>{t('pro.saveTime')}</Text>
+          <Text marginVertical={sizes.padding}>
+            {translatedLocale('pro.saveTime')}
+          </Text>
 
           <Text>{translatedLocale('pro.takeAdvantage')}</Text>
 

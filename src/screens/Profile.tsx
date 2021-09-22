@@ -10,7 +10,7 @@ const isAndroid = Platform.OS === 'android';
 
 const Profile = () => {
   const {user} = useData();
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const navigation = useNavigation();
   const {assets, colors, sizes} = useTheme();
 
@@ -66,7 +66,7 @@ const Profile = () => {
                 transform={[{rotate: '180deg'}]}
               />
               <Text p white marginLeft={sizes.s}>
-                {t('profile.title')}
+                {translatedLocale('profile.title')}
               </Text>
             </Button>
             <Block flex={0} align="center">
@@ -97,7 +97,7 @@ const Profile = () => {
                     paddingHorizontal={sizes.m}
                     color="rgba(255,255,255,0.2)">
                     <Text white bold transform="uppercase">
-                      {t('common.follow')}
+                      {translatedLocale('common.follow')}
                     </Text>
                   </Block>
                 </Button>
@@ -151,15 +151,15 @@ const Profile = () => {
               renderToHardwareTextureAndroid>
               <Block align="center">
                 <Text h5>{user?.stats?.posts}</Text>
-                <Text>{t('profile.posts')}</Text>
+                <Text>{translatedLocale('profile.posts')}</Text>
               </Block>
               <Block align="center">
                 <Text h5>{(user?.stats?.followers || 0) / 1000}k</Text>
-                <Text>{t('profile.followers')}</Text>
+                <Text>{translatedLocale('profile.followers')}</Text>
               </Block>
               <Block align="center">
                 <Text h5>{(user?.stats?.following || 0) / 1000}k</Text>
-                <Text>{t('profile.following')}</Text>
+                <Text>{translatedLocale('profile.following')}</Text>
               </Block>
             </Block>
           </Block>
@@ -167,7 +167,7 @@ const Profile = () => {
           {/* profile: about me */}
           <Block paddingHorizontal={sizes.sm}>
             <Text h5 semibold marginBottom={sizes.s} marginTop={sizes.sm}>
-              {t('profile.aboutMe')}
+              {translatedLocale('profile.aboutMe')}
             </Text>
             <Text p lineHeight={26}>
               {user?.about}
@@ -178,11 +178,11 @@ const Profile = () => {
           <Block paddingHorizontal={sizes.sm} marginTop={sizes.s}>
             <Block row align="center" justify="space-between">
               <Text h5 semibold>
-                {t('common.album')}
+                {translatedLocale('common.album')}
               </Text>
               <Button>
                 <Text p primary semibold>
-                  {t('common.viewall')}
+                  {translatedLocale('common.viewall')}
                 </Text>
               </Button>
             </Block>

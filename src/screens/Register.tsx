@@ -23,7 +23,7 @@ interface IRegistrationValidation {
 
 const Register = () => {
   const {isDark} = useData();
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const navigation = useNavigation();
   const [isValid, setIsValid] = useState<IRegistrationValidation>({
     name: false,
@@ -88,12 +88,12 @@ const Register = () => {
                 transform={[{rotate: '180deg'}]}
               />
               <Text p white marginLeft={sizes.s}>
-                {t('common.goBack')}
+                {translatedLocale('common.goBack')}
               </Text>
             </Button>
 
             <Text h4 center white marginBottom={sizes.md}>
-              {t('register.title')}
+              {translatedLocale('register.title')}
             </Text>
           </Image>
         </Block>
@@ -118,7 +118,7 @@ const Register = () => {
               tint={colors.blurTint}
               paddingVertical={sizes.sm}>
               <Text p semibold center>
-                {t('register.subtitle')}
+                {translatedLocale('register.subtitle')}
               </Text>
               {/* social buttons */}
               <Block row center justify="space-evenly" marginVertical={sizes.m}>
@@ -163,7 +163,7 @@ const Register = () => {
                   gradient={gradients.divider}
                 />
                 <Text center marginHorizontal={sizes.s}>
-                  {t('common.or')}
+                  {translatedLocale('common.or')}
                 </Text>
                 <Block
                   flex={0}
@@ -179,8 +179,8 @@ const Register = () => {
                 <Input
                   autoCapitalize="none"
                   marginBottom={sizes.m}
-                  label={t('common.name')}
-                  placeholder={t('common.namePlaceholder')}
+                  label={translatedLocale('common.name')}
+                  placeholder={translatedLocale('common.namePlaceholder')}
                   success={Boolean(registration.name && isValid.name)}
                   danger={Boolean(registration.name && !isValid.name)}
                   onChangeText={(value) => handleChange({name: value})}
@@ -188,9 +188,9 @@ const Register = () => {
                 <Input
                   autoCapitalize="none"
                   marginBottom={sizes.m}
-                  label={t('common.email')}
+                  label={translatedLocale('common.email')}
                   keyboardType="email-address"
-                  placeholder={t('common.emailPlaceholder')}
+                  placeholder={translatedLocale('common.emailPlaceholder')}
                   success={Boolean(registration.email && isValid.email)}
                   danger={Boolean(registration.email && !isValid.email)}
                   onChangeText={(value) => handleChange({email: value})}
@@ -199,8 +199,8 @@ const Register = () => {
                   secureTextEntry
                   autoCapitalize="none"
                   marginBottom={sizes.m}
-                  label={t('common.password')}
-                  placeholder={t('common.passwordPlaceholder')}
+                  label={translatedLocale('common.password')}
+                  placeholder={translatedLocale('common.passwordPlaceholder')}
                   onChangeText={(value) => handleChange({password: value})}
                   success={Boolean(registration.password && isValid.password)}
                   danger={Boolean(registration.password && !isValid.password)}
@@ -214,13 +214,13 @@ const Register = () => {
                   onPress={(value) => handleChange({agreed: value})}
                 />
                 <Text paddingRight={sizes.s}>
-                  {t('common.agree')}
+                  {translatedLocale('common.agree')}
                   <Text
                     semibold
                     onPress={() => {
                       Linking.openURL('https://www.creative-tim.com/terms');
                     }}>
-                    {t('common.terms')}
+                    {translatedLocale('common.terms')}
                   </Text>
                 </Text>
               </Block>
@@ -231,7 +231,7 @@ const Register = () => {
                 gradient={gradients.primary}
                 disabled={Object.values(isValid).includes(false)}>
                 <Text bold white transform="uppercase">
-                  {t('common.signup')}
+                  {translatedLocale('common.signup')}
                 </Text>
               </Button>
               <Button
@@ -242,7 +242,7 @@ const Register = () => {
                 marginHorizontal={sizes.sm}
                 onPress={() => navigation.navigate('Pro')}>
                 <Text bold primary transform="uppercase">
-                  {t('common.signin')}
+                  {translatedLocale('common.signin')}
                 </Text>
               </Button>
             </Block>
