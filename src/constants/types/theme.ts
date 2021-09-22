@@ -79,6 +79,9 @@ export interface ThemeColors {
   text: ColorValue;
   primary: ColorValue;
   secondary: ColorValue;
+  primarySoft: ColorValue;
+  secondarySoft: ColorValue;
+  tertiarySoft: ColorValue;
   tertiary: ColorValue;
   black: ColorValue;
   white: ColorValue;

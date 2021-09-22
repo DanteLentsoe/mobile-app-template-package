@@ -107,7 +107,7 @@ export default () => {
       headerTransparent: true,
       headerTitle: () => (
         <Text p white semibold>
-          {translatedLocale('pro.title')}
+          {translatedLocale('termsPage.heading')}
         </Text>
       ),
       headerRight: () => null,

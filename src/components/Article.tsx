@@ -19,7 +19,7 @@ const Article = ({
   user,
   onPress,
 }: IArticle) => {
-  const {t} = useTranslation();
+  const {translatedLocale} = useTranslation();
   const {colors, gradients, icons, sizes} = useTheme();
 
   // render card for Newest & Fashion
@@ -68,7 +68,7 @@ const Article = ({
                   {user?.name}
                 </Text>
                 <Text p gray>
-                  {t('common.posted', {
+                  {translatedLocale('common.posted', {
                     date: dayjs(timestamp).format('DD MMMM') || '-',
                   })}
                 </Text>
