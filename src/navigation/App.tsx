@@ -40,8 +40,8 @@ export default () => {
       border: 'rgba(0,0,0,0)',
       text: String(theme.colors.text),
       card: String(theme.colors.card),
-      primary: String(theme.colors.primary),
-      notification: String(theme.colors.primary),
+      primary: String(theme.colors.primarySoft),
+      notification: String(theme.colors.primarySoft),
       background: String(theme.colors.background),
     },
   };

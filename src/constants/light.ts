@@ -16,11 +16,13 @@ export const COLORS: ThemeColors = {
   /** UI color for #primary */
   primary: '#CB0C9F',
   /** UI color for #secondary */
+  
   secondary: '#627594', // '#8392AB',
   /** UI color for #tertiary */
   tertiary: '#E8AE4C',
 
   primarySoft: '#03DAC6',
+  
   secondarySoft: '#FFFFFF',
   tertiarySoft: '#000000',
 
@@ -82,6 +84,9 @@ export const COLORS: ThemeColors = {
 
 export const GRADIENTS: ThemeGradients = {
   primary: ['#FF0080', '#7928CA'],
+  primarySoft: ['#03DAC6', '#03DAC6'],
+  secondarySoft: ['#FFFFFF'],
+  tertiarySoft: ['#000000'],
   secondary: ['#A8B8D8', '#627594'],
   info: ['#21D4FD', '#2152FF'],
   success: ['#98EC2D', '#17AD37'],

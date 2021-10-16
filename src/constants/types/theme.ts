@@ -125,6 +125,9 @@ export interface ThemeGradients {
   info?: string[];
   divider?: string[];
   menu?: string[];
+  primarySoft: string[];
+  secondarySoft: string[];
+  tertiarySoft: string[];
 }
 
 export interface ThemeSizes {
@@ -240,7 +243,6 @@ export interface ThemeIcons {
   register: ImageSourcePropType;
   rental: ImageSourcePropType;
   search: ImageSourcePropType;
-  settings: ImageSourcePropType;
   star: ImageSourcePropType;
   train: ImageSourcePropType;
   users: ImageSourcePropType;

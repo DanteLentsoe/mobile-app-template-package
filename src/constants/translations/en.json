@@ -61,9 +61,8 @@
     "articles": "Articles",
     "rental": "Terms and Conditions Page",
     "profile": "Profile",
-    "settings": "Settings",
     "register": "Sign Up Page",
-    "extra": "Extra - Automotive"
+    "paymentFlow": "Payment Flow"
   },
   "navigation": {
     "home": "DanWare Software UI",
@@ -74,24 +73,26 @@
     "booking": "Booking",
     "chat": "Chat",
     "profile": "Profile",
-    "settings": "Settings",
     "notifications": "Notifications",
     "agreement": "User Agreement",
     "about": "About",
     "privacy": "Privacy",
     "register": "Register",
     "login": "Login",
-    "extra": "Automotive",
+    "paymentFlow": "Payment Flow",
     "shopping": "Shopping Cart"
   },
   "menu": {
-    "started": "Getting Started",
+    "developer": "Developer",
     "documentation": "Documentation"
   },
   "home": {
     "title": "DanWare Software UI",
-    "following": "Following",
-    "trending": "Trending"
+    "paginationOne": "Page One",
+    "paginationTwo": "Page Two"
+  },
+  "paymentFlow": {
+    "title": "Payment Flow "
   },
   "register": {
     "title": "Welcome",

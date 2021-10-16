@@ -3,20 +3,19 @@ import React, {useCallback, useState} from 'react';
 import {useData, useTheme, useTranslation} from '../hooks/';
 import {Block, Button, Image, Input, Product, Text} from '../components/';
 
-const Home = () => {
+const PaymentFlow = () => {
   const {translatedLocale} = useTranslation();
   const [tab, setTab] = useState<number>(0);
   const {following, trending} = useData();
-  const [defaultPage, setDefaultPage] = useState(following);
+  const [products, setProducts] = useState(following);
   const {assets, colors, fonts, gradients, sizes} = useTheme();
 
-  // pagination hook for pages
-  const handlePagination = useCallback(
+  const handleProducts = useCallback(
     (tab: number) => {
       setTab(tab);
-      setDefaultPage(tab === 0 ? following : trending);
+      setProducts(tab === 0 ? following : trending);
     },
-    [following, trending, setTab, setDefaultPage],
+    [following, trending, setTab, setProducts],
   );
 
   return (
@@ -26,7 +25,7 @@ const Home = () => {
         <Input search placeholder={translatedLocale('common.search')} />
       </Block>
 
-      {/* toggle home page components */}
+      {/* toggle products list */}
       <Block
         row
         flex={0}
@@ -34,7 +33,7 @@ const Home = () => {
         justify="center"
         color={colors.card}
         paddingBottom={sizes.sm}>
-        <Button onPress={() => handlePagination(0)}>
+        <Button onPress={() => handleProducts(0)}>
           <Block row align="center">
             <Block
               flex={0}
@@ -44,11 +43,11 @@ const Home = () => {
               marginRight={sizes.s}
               width={sizes.socialIconSize}
               height={sizes.socialIconSize}
-              gradient={gradients?.[tab === 0 ? 'primarySoft' : 'black']}>
+              gradient={gradients?.[tab === 0 ? 'primary' : 'secondary']}>
               <Image source={assets.extras} color={colors.white} radius={0} />
             </Block>
             <Text p font={fonts?.[tab === 0 ? 'medium' : 'normal']}>
-              {translatedLocale('home.paginationOne')}
+              {translatedLocale('paymentFlow.title')}
             </Text>
           </Block>
         </Button>
@@ -59,7 +58,7 @@ const Home = () => {
           marginHorizontal={sizes.sm}
           height={sizes.socialIconSize}
         />
-        <Button onPress={() => handlePagination(1)}>
+        <Button onPress={() => handleProducts(1)}>
           <Block row align="center">
             <Block
               flex={0}
@@ -69,7 +68,7 @@ const Home = () => {
               marginRight={sizes.s}
               width={sizes.socialIconSize}
               height={sizes.socialIconSize}
-              gradient={gradients?.[tab === 1 ? 'primarySoft' : 'black']}>
+              gradient={gradients?.[tab === 1 ? 'primary' : 'secondary']}>
               <Image
                 radius={0}
                 color={colors.white}
@@ -77,7 +76,7 @@ const Home = () => {
               />
             </Block>
             <Text p font={fonts?.[tab === 1 ? 'medium' : 'normal']}>
-              {translatedLocale('home.paginationTwo')}
+              {/* {translatedLocale('home.trending')} */}
             </Text>
           </Block>
         </Button>
@@ -90,8 +89,8 @@ const Home = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{paddingBottom: sizes.l}}>
         <Block row wrap="wrap" justify="space-between" marginTop={sizes.sm}>
-          {defaultPage?.map((defaultPage) => (
-            <Product {...defaultPage} key={`card-${defaultPage?.id}`} />
+          {products?.map((product) => (
+            <Product {...product} key={`card-${product?.id}`} />
           ))}
         </Block>
       </Block>
@@ -99,4 +98,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PaymentFlow;

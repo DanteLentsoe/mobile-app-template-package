@@ -101,17 +101,17 @@ const DrawerContent = (
       to: 'Profile',
       icon: assets.profile,
     },
-    {
-      name: translatedLocale('screens.settings'),
-      to: 'Pro',
-      icon: assets.settings,
-    },
+
     {
       name: translatedLocale('screens.register'),
       to: 'Register',
       icon: assets.register,
     },
-    {name: translatedLocale('screens.extra'), to: 'Pro', icon: assets.extras},
+    {
+      name: translatedLocale('screens.paymentFlow'),
+      to: 'PaymentFlow',
+      icon: assets.payment,
+    },
   ];
 
   return (
@@ -150,7 +150,7 @@ const DrawerContent = (
                 width={sizes.md}
                 height={sizes.md}
                 marginRight={sizes.s}
-                gradient={gradients[isActive ? 'primary' : 'white']}>
+                gradient={gradients[isActive ? 'primarySoft' : 'white']}>
                 <Image
                   radius={0}
                   width={14}
@@ -173,19 +173,12 @@ const DrawerContent = (
           marginVertical={sizes.sm}
           gradient={gradients.menu}
         />
-
-        <Text semibold transform="uppercase" opacity={0.5}>
-          {translatedLocale('menu.documentation')}
-        </Text>
-
         <Button
           row
           justify="flex-start"
           marginTop={sizes.sm}
           marginBottom={sizes.s}
-          onPress={() =>
-            handleWebLink('https://github.com/creativetimofficial')
-          }>
+          onPress={() => handleWebLink('https://github.com/dantelentsoe')}>
           <Block
             flex={0}
             radius={6}
@@ -204,11 +197,11 @@ const DrawerContent = (
             />
           </Block>
           <Text p color={labelColor}>
-            {translatedLocale('menu.started')}
+            {translatedLocale('menu.developer')}
           </Text>
         </Button>
 
-        <Block row justify="space-between" marginTop={sizes.sm}>
+        {/* <Block row justify="space-between" marginTop={sizes.sm}>
           <Text color={labelColor}>{translatedLocale('darkMode')}</Text>
           <Switch
             checked={isDark}
@@ -220,7 +213,7 @@ const DrawerContent = (
               );
             }}
           />
-        </Block>
+        </Block> */}
       </Block>
     </DrawerContentScrollView>
   );
