@@ -3,14 +3,14 @@
     "name": "danware-software-soft-ui-kit-free",
     "slug": "danware-software-soft-ui-kit-free",
     "description": "React Native - DanWare Software UI Kit - Free",
-    "primaryColor": "#CB0C9F",
+    "primaryColor": "#03DAC6",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/DanWare Software.png",
       "resizeMode": "cover",
-      "backgroundColor": "#CB0C9F"
+      "backgroundColor": "#03DAC6"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,8 +21,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#CB0C9F"
+        "foregroundImage": "./assets/",
+        "backgroundColor": "#03DAC6"
       }
     },
     "web": {
