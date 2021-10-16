@@ -1,4 +1,5 @@
 export {default as About} from './Pro';
+export {default as PaymentFlow} from './PaymentFlow';
 export {default as Agreement} from './Pro';
 export {default as Articles} from './Articles';
 export {default as Chat} from './Pro';
@@ -14,6 +15,5 @@ export {default as Login} from './Pro';
 export {default as Rental} from './Pro';
 export {default as Rentals} from './Pro';
 export {default as Booking} from './Pro';
-export {default as Settings} from './Pro';
 export {default as Shopping} from './Pro';
 export {default as Pro} from './Pro';

@@ -101,17 +101,17 @@ const DrawerContent = (
       to: 'Profile',
       icon: assets.profile,
     },
-    {
-      name: translatedLocale('screens.settings'),
-      to: 'Pro',
-      icon: assets.settings,
-    },
+
     {
       name: translatedLocale('screens.register'),
       to: 'Register',
       icon: assets.register,
     },
-    {name: translatedLocale('screens.extra'), to: 'Pro', icon: assets.extras},
+    {
+      name: translatedLocale('screens.paymentFlow'),
+      to: 'PaymentFlow',
+      icon: assets.payment,
+    },
   ];
 
   return (
@@ -150,7 +150,7 @@ const DrawerContent = (
                 width={sizes.md}
                 height={sizes.md}
                 marginRight={sizes.s}
-                gradient={gradients[isActive ? 'primary' : 'white']}>
+                gradient={gradients[isActive ? 'primarySoft' : 'black']}>
                 <Image
                   radius={0}
                   width={14}
