@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Platform, StyleSheet, Text, TextStyle} from 'react-native';
 import {LinearGradient} from 'expo-linear-gradient';
 import MaskedView from '@react-native-community/masked-view';
@@ -208,4 +208,4 @@ const Typography = (props: ITextProps) => {
   );
 };
 
-export default React.memo(Typography);
+export default memo(Typography);

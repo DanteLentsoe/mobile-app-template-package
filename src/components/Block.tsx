@@ -76,7 +76,7 @@ const Block = (props: IBlockProps) => {
   const {colors, sizes} = useTheme();
 
   const colorIndex = primary
-    ? 'primary'
+    ? 'primarySoft'
     : secondary
     ? 'secondary'
     : tertiary

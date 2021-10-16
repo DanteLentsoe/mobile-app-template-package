@@ -1,7 +1,15 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Articles, Components, Home, Profile, Register, Pro} from '../screens';
+import {
+  Articles,
+  Components,
+  Home,
+  Profile,
+  Register,
+  Pro,
+  PaymentFlow,
+} from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
 
 const Stack = createStackNavigator();
@@ -16,6 +24,12 @@ export default () => {
         name="Home"
         component={Home}
         options={{title: translatedLocale('navigation.home')}}
+      />
+
+      <Stack.Screen
+        name="PaymentFlow"
+        component={PaymentFlow}
+        options={{title: translatedLocale('navigation.paymentFlow')}}
       />
 
       <Stack.Screen
