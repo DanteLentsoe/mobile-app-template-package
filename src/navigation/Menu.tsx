@@ -173,11 +173,6 @@ const DrawerContent = (
           marginVertical={sizes.sm}
           gradient={gradients.menu}
         />
-
-        <Text semibold transform="uppercase" opacity={0.5}>
-          {translatedLocale('menu.documentation')}
-        </Text>
-
         <Button
           row
           justify="flex-start"
@@ -202,11 +197,11 @@ const DrawerContent = (
             />
           </Block>
           <Text p color={labelColor}>
-            {translatedLocale('menu.started')}
+            {translatedLocale('menu.developer')}
           </Text>
         </Button>
 
-        <Block row justify="space-between" marginTop={sizes.sm}>
+        {/* <Block row justify="space-between" marginTop={sizes.sm}>
           <Text color={labelColor}>{translatedLocale('darkMode')}</Text>
           <Switch
             checked={isDark}
@@ -218,7 +213,7 @@ const DrawerContent = (
               );
             }}
           />
-        </Block>
+        </Block> */}
       </Block>
     </DrawerContentScrollView>
   );

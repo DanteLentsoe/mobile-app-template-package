@@ -16,11 +16,13 @@ export const COLORS: ThemeColors = {
   /** UI color for #primary */
   primary: '#CB0C9F',
   /** UI color for #secondary */
+  
   secondary: '#627594', // '#8392AB',
   /** UI color for #tertiary */
   tertiary: '#E8AE4C',
 
   primarySoft: '#03DAC6',
+  
   secondarySoft: '#FFFFFF',
   tertiarySoft: '#000000',
 
