@@ -85,45 +85,38 @@ export const USERS: IUser[] = [
 export const FOLLOWING: IProduct[] = [
   {
     id: 1,
-    type: 'vertical',
-    title: 'Unique activities with local experts.',
+    type: 'horizontal',
+    title: 'Component One',
     image:
       'https://images.unsplash.com/photo-1604998103924-89e012e5265a?fit=crop&w=450&q=80',
   },
   {
     id: 2,
-    type: 'vertical',
-    title: 'The highest status people.',
+    type: 'horizontal',
+    title: 'Component Two',
     image:
       'https://images.unsplash.com/photo-1563492065599-3520f775eeed?fit=crop&w=450&q=80',
   },
   {
     id: 3,
     type: 'horizontal',
-    title: 'Experiences and things to do wherever you are.',
+    title: 'Component Three',
     image:
       'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?fit=crop&w=450&q=80',
   },
   {
     id: 4,
     type: 'vertical',
-    title: 'Get more followers and grow.',
+    title: 'Component Four',
     image:
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fit=crop&w=450&q=80',
   },
   {
     id: 5,
     type: 'vertical',
-    title: 'New ways to meet your business goals.',
+    title: 'Component Five',
     image:
       'https://images.unsplash.com/photo-1497215728101-856f4ea42174?fit=crop&w=450&q=80',
-  },
-  {
-    id: 6,
-    type: 'horizontal',
-    title: 'Adventures - Multi day trips with meals and stays.',
-    image:
-      'https://images.unsplash.com/photo-1468078809804-4c7b3e60a478?fit=crop&w=450&q=80',
   },
 ];
 
