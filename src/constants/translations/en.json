@@ -88,8 +88,8 @@
   },
   "home": {
     "title": "DanWare Software UI",
-    "following": "Following",
-    "trending": "Trending"
+    "paginationOne": "Page One",
+    "paginationTwo": "Page Two"
   },
   "paymentFlow": {
     "title": "Payment Flow "

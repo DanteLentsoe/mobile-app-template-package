@@ -7,15 +7,16 @@ const Home = () => {
   const {translatedLocale} = useTranslation();
   const [tab, setTab] = useState<number>(0);
   const {following, trending} = useData();
-  const [products, setProducts] = useState(following);
+  const [defaultPage, setDefaultPage] = useState(following);
   const {assets, colors, fonts, gradients, sizes} = useTheme();
 
-  const handleProducts = useCallback(
+  // pagination hook for pages
+  const handlePagination = useCallback(
     (tab: number) => {
       setTab(tab);
-      setProducts(tab === 0 ? following : trending);
+      setDefaultPage(tab === 0 ? following : trending);
     },
-    [following, trending, setTab, setProducts],
+    [following, trending, setTab, setDefaultPage],
   );
 
   return (
@@ -25,7 +26,7 @@ const Home = () => {
         <Input search placeholder={translatedLocale('common.search')} />
       </Block>
 
-      {/* toggle products list */}
+      {/* toggle home page components */}
       <Block
         row
         flex={0}
@@ -33,7 +34,7 @@ const Home = () => {
         justify="center"
         color={colors.card}
         paddingBottom={sizes.sm}>
-        <Button onPress={() => handleProducts(0)}>
+        <Button onPress={() => handlePagination(0)}>
           <Block row align="center">
             <Block
               flex={0}
@@ -47,7 +48,7 @@ const Home = () => {
               <Image source={assets.extras} color={colors.white} radius={0} />
             </Block>
             <Text p font={fonts?.[tab === 0 ? 'medium' : 'normal']}>
-              {translatedLocale('home.following')}
+              {translatedLocale('home.paginationOne')}
             </Text>
           </Block>
         </Button>
@@ -58,7 +59,7 @@ const Home = () => {
           marginHorizontal={sizes.sm}
           height={sizes.socialIconSize}
         />
-        <Button onPress={() => handleProducts(1)}>
+        <Button onPress={() => handlePagination(1)}>
           <Block row align="center">
             <Block
               flex={0}
@@ -76,7 +77,7 @@ const Home = () => {
               />
             </Block>
             <Text p font={fonts?.[tab === 1 ? 'medium' : 'normal']}>
-              {translatedLocale('home.trending')}
+              {translatedLocale('home.paginationTwo')}
             </Text>
           </Block>
         </Button>
@@ -89,8 +90,8 @@ const Home = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{paddingBottom: sizes.l}}>
         <Block row wrap="wrap" justify="space-between" marginTop={sizes.sm}>
-          {products?.map((product) => (
-            <Product {...product} key={`card-${product?.id}`} />
+          {defaultPage?.map((defaultPage) => (
+            <Product {...defaultPage} key={`card-${defaultPage?.id}`} />
           ))}
         </Block>
       </Block>

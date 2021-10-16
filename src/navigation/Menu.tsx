@@ -150,7 +150,7 @@ const DrawerContent = (
                 width={sizes.md}
                 height={sizes.md}
                 marginRight={sizes.s}
-                gradient={gradients[isActive ? 'primarySoft' : 'black']}>
+                gradient={gradients[isActive ? 'primarySoft' : 'white']}>
                 <Image
                   radius={0}
                   width={14}
@@ -183,9 +183,7 @@ const DrawerContent = (
           justify="flex-start"
           marginTop={sizes.sm}
           marginBottom={sizes.s}
-          onPress={() =>
-            handleWebLink('https://github.com/creativetimofficial')
-          }>
+          onPress={() => handleWebLink('https://github.com/dantelentsoe')}>
           <Block
             flex={0}
             radius={6}
