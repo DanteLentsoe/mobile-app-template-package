@@ -43,7 +43,7 @@ const Home = () => {
               marginRight={sizes.s}
               width={sizes.socialIconSize}
               height={sizes.socialIconSize}
-              gradient={gradients?.[tab === 0 ? 'primary' : 'secondary']}>
+              gradient={gradients?.[tab === 0 ? 'primarySoft' : 'black']}>
               <Image source={assets.extras} color={colors.white} radius={0} />
             </Block>
             <Text p font={fonts?.[tab === 0 ? 'medium' : 'normal']}>
@@ -68,7 +68,7 @@ const Home = () => {
               marginRight={sizes.s}
               width={sizes.socialIconSize}
               height={sizes.socialIconSize}
-              gradient={gradients?.[tab === 1 ? 'primary' : 'secondary']}>
+              gradient={gradients?.[tab === 1 ? 'primarySoft' : 'black']}>
               <Image
                 radius={0}
                 color={colors.white}
